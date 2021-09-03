@@ -1,0 +1,51 @@
+INSERT INTO produtos VALUES
+(DEFAULT,'Pão de manteiga',3.5,125,'Padaria'),20
+(DEFAULT,'Manteiga',5.99,60,'Padaria'),21
+(DEFAULT,'Xampu',6.99,200,'Perfumaria'),22
+(DEFAULT,'Sabonete',0.89,500,'Perfumaria')23,
+(DEFAULT,'Tomate',3.9,58,'Hortifruti'),24
+(DEFAULT,'Cebola roxa',2.99,50,'Hortifruti'),25
+(DEFAULT,'Arroz',2.5,200,'Alimentos'),26
+(DEFAULT,'Feijão',3.69,250,'Alimentos');27
+
+INSERT INTO venda Values 1,2,3
+idVenda, idConsumidor,valorTotalVenda
+(DEFAULT,2)
+()
+()
+()
+()
+()
+
+SELECT * FROM `itens_vendidos`;
+
+INSERT into itens_vendidos VALUES
+idProduto, idVenda, quantidadeVendida, valorProduto, valorTotalProdutos
+(DEFAULT,DEFAULT, 5),
+(),
+();
+
+
+SELECT itens_vendidos.valorTotalProduto SUM (valorTotalProduto)  FROM itens_vendidos;
+
+SELECT SUM(valorTotalProduto) AS ValorTotal
+	FROM itens_vendidos Iv
+    WHERE idVenda-1;
+	
+
+SELECT SUM(valorTotalProduto) FROM itens_vendidos;
+
+SELECT SUM(valorTotalProduto) AS ValorTotal FROM itens_vendidos;
+
+
+SELECT c.idVenda SUM(valorTotalProduto) AS ValorTotal 
+	FROM itens_vendidos Iv
+		INNER JOIN consumidor.tipoConsumidor c ON c.idVenda = Iv.idVenda
+GROUP BY c.idVenda
+
+
+
+
+
+
+
